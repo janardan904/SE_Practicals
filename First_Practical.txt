@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+  
+  
+  void readArray(int arr[],int size);
+  void displayArray(int arr[],int size);
+  void bubbleSort(int arr[],int size);
+  void swap(int &a,int &b);
+  
+  int main(){
+      const int max_size=4;
+      int numbers[max_size];
+      
+      //read numbers into the array
+      cout<<"enter the "<<" "<< max_size   <<"  numbers:"<<endl;
+      readArray(numbers,max_size);
+      
+      //display unsorted array
+      cout<<"unsorted Array:   " << "  ";
+      displayArray(numbers,max_size);
+      //cout<<"sorted  elements:" << " ";
+      bubbleSort(numbers,max_size);
+      cout<<"display sorted array:   "<< " ";
+      displayArray(numbers,max_size);
+  }
+  
+  void readArray(int arr[],int size){
+      for(int i=0;i<size;i++){
+          cin>> arr[i];
+      }
+      
+  }
+  void displayArray(int arr[],int size ){
+      for(int i=0;i<size;i++){
+          cout<< arr[i]<<"  ";
+      }
+      cout<< endl;
+  }
+  
+  void bubbleSort(int arr[],int size){
+      for(int i=0;i<size;i++){
+          for(int j=0;j<size-1;j++){
+              if(arr[j]>arr[j+1]){
+                  swap(arr[j],arr[j+1]);
+              }
+          }
+      }
+  }
+  
+  void swap(int &a,int &b){
+     a=a*b;
+     b=a/b;
+     a=a/b;
+  }
