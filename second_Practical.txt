@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+void display(int num);
+void display(double num);
+void display(char ch);
+void display(string str);
+
+int main(){
+ display(10);
+ display(10.5);
+ display('A');
+ display("janardan");
+    
+    return 0;
+}
+
+void display(int num){
+    cout<< "Integer: "<< num <<endl;
+}
+void display(double num){
+    cout<< "double: "<< num <<endl;
+}
+void display(char ch){
+    cout<< "charecter: "<< ch <<endl;
+}
+void display(string str){
+    cout<< "String: "<< str <<endl;
+}
+
